@@ -1,7 +1,8 @@
 import { useReducer } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function UseReducerPage(){
-
+    const navigate = useNavigate();
     const reducer = (state, action)=>{
         console.log(state)
         switch(action){
@@ -20,6 +21,9 @@ export default function UseReducerPage(){
             <button onClick={()=> dispatch('increment')}>increment</button>
             <button onClick={()=> dispatch('decrement')}>decrement</button>
             <p>State: {state.count}</p>
+
+            <br/><br/>
+            <button onClick={()=>navigate("/")}>Go Home</button>
         </div>
     );
 }

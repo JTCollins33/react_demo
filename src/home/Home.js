@@ -28,7 +28,6 @@ export default function HomePage(){
             <button onClick={navigateUseCallbackPage}>Go to Callback page</button>
             <button onClick={navigateUseMemoPage}>Go to Memo page</button>
             <button onClick={navigateUseReducerPage}>Go to Reducer page</button>
-
         </div>
     );
 }

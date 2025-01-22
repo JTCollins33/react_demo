@@ -1,6 +1,9 @@
 import { useMemo, useReducer, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function UseMemo(){
+    const navigate = useNavigate();
+
     const reducer = (state, action) => {
         switch(action){
             case 'increment':
@@ -43,6 +46,9 @@ export default function UseMemo(){
             <br/>
             <h4>Memoized Value: {sum}</h4>
             <button onClick={()=>calculate(a.value, b.value)}>Calculate sum</button>
+
+            <br/><br/>
+            <button onClick={()=>navigate("/")}>Go Home</button>
 
         </div>
     );
