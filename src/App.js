@@ -11,6 +11,7 @@ import UseContextPage from './useContextPage/UseContextPage';
 import PropDrillingSolutionPage from './propDrillingSolutionPage/PropDrillingSolutionPage';
 import { useState } from 'react';
 import { CountContext } from './context/Context';
+import UseRefPage from './useRefPage/UseRefPage';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,6 +29,7 @@ function App() {
             <Route path="/useCallbackPage" element={<UseCallbackPage/>}/>
             <Route path="/useContextPage" element={<UseContextPage/>}/>
             <Route path="/propDrillingSolutionPage" element={<PropDrillingSolutionPage/>}/>
+            <Route path="/useRefPage" element={<UseRefPage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
           </Routes>
         </CountContext.Provider>

@@ -21,6 +21,9 @@ export default function HomePage(){
     const navigatePropDrillingSolutionPage = ()=>{
         navigate("/propDrillingSolutionPage")
     }
+    const navigateUseRefPage = ()=>{
+        navigate("/useRefPage")
+    }
 
 
     return(
@@ -32,6 +35,7 @@ export default function HomePage(){
             <button onClick={navigateUseReducerPage}>Go to Reducer page</button>
             <button onClick={navigateUseContextPage}>Go to Context page</button>
             <button onClick={navigatePropDrillingSolutionPage}>Go to prop drilling solution page</button>
+            <button onClick={navigateUseRefPage}>Go to UseRef page</button>
         </div>
     );
 }
