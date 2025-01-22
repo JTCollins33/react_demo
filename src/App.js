@@ -7,10 +7,9 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import UseMemoPage from './useMemoPage/UseMemoPage';
 import UseCallbackPage from './useCallbackPage/UseCallbackPage';
 import UseReducerPage from './useReducerPage/UseReducerPage';
+import UseContextPage from './useContextPage/UseContextPage';
 
 function App() {
-
-
   return (
     <BrowserRouter>
       <div>
@@ -21,6 +20,7 @@ function App() {
           <Route path="/useReducerPage" element={<UseReducerPage/>}/>
           <Route path="/useMemoPage" element={<UseMemoPage/>}/>
           <Route path="/useCallbackPage" element={<UseCallbackPage/>}/>
+          <Route path="/useContextPage" element={<UseContextPage/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
         <br/><br/>

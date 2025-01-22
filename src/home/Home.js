@@ -16,6 +16,10 @@ export default function HomePage(){
         navigate("/useReducerPage")
     }
 
+    const navigateUseContextPage = ()=>{
+        navigate("/useContextPage")
+    }
+
 
     return(
         <div>
@@ -24,6 +28,7 @@ export default function HomePage(){
             <button onClick={navigateUseCallbackPage}>Go to Callback page</button>
             <button onClick={navigateUseMemoPage}>Go to Memo page</button>
             <button onClick={navigateUseReducerPage}>Go to Reducer page</button>
+            <button onClick={navigateUseContextPage}>Go to Context page</button>
         </div>
     );
 }
