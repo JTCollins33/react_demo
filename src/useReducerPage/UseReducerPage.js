@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-export default function Page1(){
+export default function UseReducerPage(){
 
     const reducer = (state, action)=>{
         console.log(state)
@@ -16,7 +16,7 @@ export default function Page1(){
 
     return(
         <div>
-            <h3>This is page1</h3>
+            <h3>useReducer page</h3>
             <button onClick={()=> dispatch('increment')}>increment</button>
             <button onClick={()=> dispatch('decrement')}>decrement</button>
             <p>State: {state.count}</p>

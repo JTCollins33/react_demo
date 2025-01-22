@@ -8,8 +8,16 @@ export default function HomePage(){
         console.log("hit the home page")
     }, []);
 
-    const navigatePage1 = ()=>{
-        navigate("/page1")
+    const navigateUseCallbackPage = ()=>{
+        navigate("/useCallbackPage")
+    }
+
+    const navigateUseMemoPage = ()=>{
+        navigate("/useMemoPage")
+    }
+
+    const navigateUseReducerPage = ()=>{
+        navigate("/useReducerPage")
     }
 
 
@@ -17,7 +25,10 @@ export default function HomePage(){
         <div>
             <h3>This is the home page</h3>
             <br/>
-            <button onClick={navigatePage1}>Go to page 1</button>
+            <button onClick={navigateUseCallbackPage}>Go to Callback page</button>
+            <button onClick={navigateUseMemoPage}>Go to Memo page</button>
+            <button onClick={navigateUseReducerPage}>Go to Reducer page</button>
+
         </div>
     );
 }
