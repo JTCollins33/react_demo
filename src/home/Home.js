@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage(){
@@ -19,6 +18,9 @@ export default function HomePage(){
     const navigateUseContextPage = ()=>{
         navigate("/useContextPage")
     }
+    const navigatePropDrillingSolutionPage = ()=>{
+        navigate("/propDrillingSolutionPage")
+    }
 
 
     return(
@@ -29,6 +31,7 @@ export default function HomePage(){
             <button onClick={navigateUseMemoPage}>Go to Memo page</button>
             <button onClick={navigateUseReducerPage}>Go to Reducer page</button>
             <button onClick={navigateUseContextPage}>Go to Context page</button>
+            <button onClick={navigatePropDrillingSolutionPage}>Go to prop drilling solution page</button>
         </div>
     );
 }

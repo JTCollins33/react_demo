@@ -8,21 +8,29 @@ import UseMemoPage from './useMemoPage/UseMemoPage';
 import UseCallbackPage from './useCallbackPage/UseCallbackPage';
 import UseReducerPage from './useReducerPage/UseReducerPage';
 import UseContextPage from './useContextPage/UseContextPage';
+import PropDrillingSolutionPage from './propDrillingSolutionPage/PropDrillingSolutionPage';
+import { useState } from 'react';
+import { CountContext } from './context/Context';
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
     <BrowserRouter>
       <div>
         <Header/>
         <br/><br/>
-        <Routes>
-          <Route path="/" element={<HomePage/>}/>
-          <Route path="/useReducerPage" element={<UseReducerPage/>}/>
-          <Route path="/useMemoPage" element={<UseMemoPage/>}/>
-          <Route path="/useCallbackPage" element={<UseCallbackPage/>}/>
-          <Route path="/useContextPage" element={<UseContextPage/>}/>
-          <Route path="*" element={<NotFoundPage/>}/>
-        </Routes>
+        <CountContext.Provider value={{count, setCount}}>
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/useReducerPage" element={<UseReducerPage/>}/>
+            <Route path="/useMemoPage" element={<UseMemoPage/>}/>
+            <Route path="/useCallbackPage" element={<UseCallbackPage/>}/>
+            <Route path="/useContextPage" element={<UseContextPage/>}/>
+            <Route path="/propDrillingSolutionPage" element={<PropDrillingSolutionPage/>}/>
+            <Route path="*" element={<NotFoundPage/>}/>
+          </Routes>
+        </CountContext.Provider>
         <br/><br/>
         <Footer/>
       </div>
