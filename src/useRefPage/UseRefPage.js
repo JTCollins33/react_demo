@@ -21,13 +21,16 @@ export default function UseRefPage(){
     return(
         <div>
             <h2>This is the UseRef page</h2><br/><br/>
+            
             <p>Type to rerender component</p>
             <input type="text" value={renderString} onChange={(e) => setRenderString(e.target.value)}/><br/><br/>
             <p>UseRef page render count: {useRefRenderCount.current}</p>
             <p>Normal constant page render count: {normalRenderCount.current}</p><br/><br/>
+
             <h4>Focus Example</h4><br/>
             <input type="text" ref={inputElement}/>
             <button onClick={focusInput}>Focus Input</button><br/><br/>
+
             <button onClick = {()=> navigate("/")}>Go Home</button>
         </div>
     );
