@@ -4,10 +4,6 @@ import { useNavigate } from "react-router-dom";
 export default function HomePage(){
     const navigate = useNavigate();
 
-    useEffect(()=>{
-        console.log("hit the home page")
-    }, []);
-
     const navigateUseCallbackPage = ()=>{
         navigate("/useCallbackPage")
     }
