@@ -1,8 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Footer(){
+    const navigate = useNavigate();
+
     return(
         <div>
             <footer>
-                <h4>This is the footer</h4>
+                <br/><br/><br/>
+                <button onClick={()=>navigate("/")}>Go Home</button>
             </footer>
         </div>
     );
