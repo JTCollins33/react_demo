@@ -12,12 +12,16 @@ import PropDrillingSolutionPage from './propDrillingSolutionPage/PropDrillingSol
 import { useState } from 'react';
 import { CountContext } from './context/Context';
 import UseRefPage from './useRefPage/UseRefPage';
+import ReduxPage from './redux/ReduxPage';
+import { Provider } from 'react-redux';
+import { reduxStore } from './redux/store';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
+      <Provider store={reduxStore}>
       <div>
         <Header/>
         <br/><br/>
@@ -30,12 +34,14 @@ function App() {
             <Route path="/useContextPage" element={<UseContextPage/>}/>
             <Route path="/propDrillingSolutionPage" element={<PropDrillingSolutionPage/>}/>
             <Route path="/useRefPage" element={<UseRefPage/>}/>
+            <Route path="/reduxPage" element={<ReduxPage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
           </Routes>
         </CountContext.Provider>
         <br/><br/>
         <Footer/>
       </div>
+      </Provider>
     </BrowserRouter>
   );
 }
