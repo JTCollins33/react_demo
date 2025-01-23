@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 export default function UseRefPage(){
-    const navigate=useNavigate();
     const useRefRenderCount = useRef(0);
     const normalRenderCount = {current: 0}
     const [renderString, setRenderString] = useState("");
@@ -30,8 +28,6 @@ export default function UseRefPage(){
             <h4>Focus Example</h4><br/>
             <input type="text" ref={inputElement}/>
             <button onClick={focusInput}>Focus Input</button><br/><br/>
-
-            <button onClick = {()=> navigate("/")}>Go Home</button>
         </div>
     );
 }

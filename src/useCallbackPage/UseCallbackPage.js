@@ -1,11 +1,7 @@
 import { useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Todos from "./Todos";
 
 export default function UseCallback(){
-    console.log("in the useCallback page")
-    const navigate = useNavigate();
-
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState([]);
 
@@ -24,9 +20,6 @@ export default function UseCallback(){
             <br/><br/>
             <p>Count: {count}</p>
             <button onClick={addCount}>Add count</button>
-
-            <br/><br/>
-            <button onClick={()=>navigate("/")}>Go Home</button>
         </div>
     );
 }
