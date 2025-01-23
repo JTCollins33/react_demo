@@ -25,6 +25,10 @@ export default function HomePage(){
         navigate("/useRefPage")
     }
 
+    const navigateReduxPage = () => {
+        navigate("/reduxPage")
+    }
+
 
     return(
         <div>
@@ -36,6 +40,7 @@ export default function HomePage(){
             <button onClick={navigateUseContextPage}>Go to Context page</button>
             <button onClick={navigatePropDrillingSolutionPage}>Go to prop drilling solution page</button>
             <button onClick={navigateUseRefPage}>Go to UseRef page</button>
+            <button onClick={navigateReduxPage}>Go to Redux page</button>
         </div>
     );
 }
